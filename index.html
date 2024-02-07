@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day!</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    text-align: center;
+  }
+  #rose-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://i.postimg.cc/J7XXHNNH/VWd7.gif');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #text {
+    color: pink;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  #button {
+    padding: 30px 40px;
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="rose-container">
+  <div id="text"><h2>Happy Rose Day</h2></div>
+  <div id="text">Do you want to see my dream?</div>
+<div id="text">👇</div>
+  <button id="button" onclick="showImage()">My dream </button>
+</div>
+<script>
+  function showImage() {
+    document.getElementById('rose-container').innerHTML = '<img src="https://i.postimg.cc/ZRG1ZBty/Screenshot-20240207-111122-1.jpg" alt="Dream" style="width: 100%; height: auto;"><div id="timer">2</div>';
+    var countDown = setInterval(function() {
+      var timer = document.getElementById('timer');
+      var count = parseInt(timer.innerHTML);
+      if (count !== 0) {
+        timer.innerHTML = count - 1;
+      } else {
+        clearInterval(countDown);
+        window.location.href = 'https://technicalaman123.github.io/rose2/';
+      }
+    }, 1000);
+  }
+</script>
+</body>
+</html>
